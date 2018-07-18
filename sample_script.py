@@ -9,7 +9,7 @@ import random
 import json
 
 if __name__ == '__main__':
-   apikey='HQpAO8ny5r-oiPj9e5v_-Qb6Eq75rs21uxLXeC1gr9td'
+   apikey=''
    version='2018-05-23'
    w=Watson(apikey,version)
    for filename in os.listdir("/home/mahima/images"):
