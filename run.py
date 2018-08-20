@@ -11,9 +11,7 @@ import time
 #import watson_developer_cloud
 
 if __name__ == '__main__':
-   #apikey='vSyMgZWfne3r_7km1VRkIuUyw-P4uc5uwl6xf3CDxi8w'
-   #apikey='HQpAO8ny5r-oiPj9e5v_-Qb6Eq75rs21uxLXeC1gr9td'
-   apikey="1ZX6szY1jPm8Bw2ubxvVoq0oiFGR8gW7eVFWVwILSakp"
+   apikey=''
    version='2018-05-22'
    w=Watson(apikey,version)
    imgs=[]
@@ -34,8 +32,8 @@ while (1):
       #end=time.time()
       
         res = w.classify(imgs[i])
-        fromaddr = "cmahima848@gmail.com"
-        toaddr = "mahimachaudhary966@gmail.com"
+        fromaddr = ""
+        toaddr = ""
         msg = MIMEMultipart()
         msg['From'] = "Watson"
         msg['To'] = "Mahima"
@@ -44,7 +42,7 @@ while (1):
         msg.attach(MIMEText(res, 'plain'))
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
-        server.login(fromaddr, "7900567892")
+        server.login(fromaddr, "")
         text = msg.as_string()
         server.sendmail(fromaddr, toaddr, text)
         server.quit()
