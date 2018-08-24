@@ -37,7 +37,7 @@ while (1):
         msg = MIMEMultipart()
         msg['From'] = "Watson"
         msg['To'] = "Mahima"
-        msg['Subject'] = "CLASSIFICATION RESULT"
+        msg['Subject'] = "WATSON CLASSIFICATION RESULT"
         #body = resp
         msg.attach(MIMEText(res, 'plain'))
         server = smtplib.SMTP('smtp.gmail.com', 587)
