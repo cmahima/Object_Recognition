@@ -8,8 +8,9 @@ from watson_developer_cloud import VisualRecognitionV3
 import random
 import json
 import time
+from light import LED
 #import watson_developer_cloud
-
+threshold=0.6
 if __name__ == '__main__':
    apikey=''
    version='2018-05-22'
@@ -47,4 +48,6 @@ while (1):
         server.sendmail(fromaddr, toaddr, text)
         server.quit()
         print(res)
- 
+        i+=1
+        l=LED()
+        LED.lit(l,threshold)
